@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>My first bootstrap</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+    <div>
+      <img width="150"
+        src="https://globalsew.com/wp-content/uploads/2021/12/59-590993_follow-us-on-instagram-logo-png-clipart.png">
+    </div>
+    <div>
+      <ul class="navbar-nav">
+        <li class="nav-item mr-2">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newPostModal">
+            Create a new post
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="newPostModal">New Post</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="input-group">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-camera-fill m-2" viewBox="0 0 16 16">
+                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                    <path
+                      d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                  </svg>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-success">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of modal -->
+        </li>
+        <li class="dropdown btn-group mt-2" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="true"
+          role="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-caret-down-fill mr-5" viewBox="0 0 16 16">
+            <path
+              d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+          </svg>
+          <div class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Log out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+
+  <!-- html files -->
+  <div class="container d-flex justify-content-center">
+    <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark"
+        class="bi bi-grid-3x3-gap m-1" viewBox="0 0 16 16">
+        <path
+          d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z" />
+      </svg></a>
+    <a href="index2.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="dark"
+        class="bi bi-app m-1" viewBox="0 0 16 16">
+        <path
+          d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z" />
+      </svg></a>
+  </div>
+  <!-- end of html files -->
+
+  <!-- images -->
+  <!-- image 1 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 2 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 3 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1605379399642-870262d3d051?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 4 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1550439062-609e1531270e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZ3JhbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 5 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHByb2dyYW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 6 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbWluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 7 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 8 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb2dyYW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- image 9 -->
+  <div class="row justify-content-center">
+    <div class="card" style="width: 30rem;">
+      <div class="d-flex justify-content-between m-2">
+        <h5>My first bootstrap</h5>
+        <p>05/19</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2dyYW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+        class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">23 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-heart"
+          viewBox="0 0 16 16">
+          <path
+            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+        </svg>
+        <input class="form-control-sm ml-2 mr-5" type="text" placeholder="comment...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+          class="bi bi-three-dots-vertical mb-2 float-right ml-5" viewBox="0 0 16 16">
+          <path
+            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- end of images -->
+
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

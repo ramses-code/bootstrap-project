@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.photos {
+    width: 100%;
+    aspect-ratio: 1/1;
+
+}
+.row {
+    margin: 5px 0 0px 0;
+}
+
